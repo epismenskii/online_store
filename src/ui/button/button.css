@@ -1,0 +1,53 @@
+.default {
+    border: 0;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: rgb(29, 92, 209);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.default:hover {
+    background-color: rgb(11, 77, 198);
+}
+
+.default:active {
+    background-color: rgb(48, 101, 198);
+}
+
+.disabled {
+    background-color: rgb(84, 117, 179);
+    color: rgb(208, 208, 208);
+}
+
+.default.disabled:hover,
+.default.disabled:active {
+  background-color: rgb(84, 117, 179);
+  cursor: not-allowed;
+}
+
+.nav {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    padding: 10px 15px;
+    padding-bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.current {
+    border-bottom: 3px solid rgb(29, 92, 209);
+    color: rgb(29, 92, 209);
+    padding-bottom: 20px;
+}
+
+.favoriteBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 12px;
+    padding: 5px;
+}
