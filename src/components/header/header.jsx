@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import "./style.css"
-import Button from '../../ui/button/Button';
+import Button from '../../ui/button/button';
 
 const Header = () => {
 

@@ -1,0 +1,27 @@
+.errorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 0;
+    gap: 48px;
+    min-height: 90vh;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.errorTitle {
+    font-size: 128px;
+    font-weight: 300;
+}
+
+.errorText {
+    font-size: 36px;
+    font-weight: 200;
+}

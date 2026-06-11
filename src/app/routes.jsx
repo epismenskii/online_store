@@ -6,6 +6,7 @@ import { Orders } from "../pages/orders/orders";
 import { Auth } from "../pages/auth/auth";
 import Layout from "./Layout";
 import Providers from "./providers";
+import Error404 from "../pages/error404/error404";
 
 const routes = createBrowserRouter([
     {
@@ -20,7 +21,7 @@ const routes = createBrowserRouter([
             { path: "/favorites", element: <Favorites />},
             { path: "/orders", element: <Orders />},
             { path: "/auth", element: <Auth />},
-            { path: "*", element: <Home />},
+            { path: "*", element: <Error404 />},
         ]
     }
 ])
