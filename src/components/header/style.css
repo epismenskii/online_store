@@ -1,13 +1,25 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 0px;
-    padding-top: 20px;
+    justify-content: space-between;
+    padding: 15px 40px 0px;
     background-color: #1c1c1c;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: 36px;
+    padding-bottom: 12px;
+    font-style: italic;
+    color: rgb(84, 117, 179);
 }
 
 .header-nav {
     display: flex;
     justify-content: space-around;
+}
+
+.signInBtn {
+    margin-top: auto;
+    padding-bottom: 12px;
 }

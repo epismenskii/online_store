@@ -16,6 +16,10 @@
     background-color: rgb(48, 101, 198);
 }
 
+.default.red{
+    background-color: brown;
+}
+
 .disabled {
     background-color: rgb(84, 117, 179);
     color: rgb(208, 208, 208);
@@ -38,10 +42,18 @@
     cursor: pointer;
 }
 
+.nav.small {
+    font-size: 16px;
+}
+
 .current {
     border-bottom: 3px solid rgb(29, 92, 209);
     color: rgb(29, 92, 209);
     padding-bottom: 20px;
+}
+
+.current.small {
+    border-bottom: 2px solid rgb(29, 92, 209);
 }
 
 .favoriteBtn {

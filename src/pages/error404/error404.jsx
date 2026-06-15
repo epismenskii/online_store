@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import Button from '../../ui/button/button'
+import Button from '../../ui/button/Button'
 import './error404.css'
 
 const Error404 = () => {

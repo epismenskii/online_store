@@ -14,10 +14,12 @@ const CardComponent = () => {
         {data?.data?.map((item) => (
           <Card key={item._id}
           className={"card"}
+          isFavorite={item.isFavorite}
           image={item.image}
           title={item.name}
           description={item.description}
-          price={item.price}>
+          price={item.price}
+          >
             Add to cart
           </Card>
         ))}
