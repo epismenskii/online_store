@@ -1,28 +1,28 @@
 .default {
-    border: 0;
-    font-size: 20px;
-    font-weight: 300;
-    background-color: rgb(29, 92, 209);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 14px;
-    cursor: pointer;
+  border: 0;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: rgb(29, 92, 209);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 14px;
+  cursor: pointer;
 }
 .default:hover {
-    background-color: rgb(11, 77, 198);
+  background-color: rgb(11, 77, 198);
 }
 
 .default:active {
-    background-color: rgb(48, 101, 198);
+  background-color: rgb(48, 101, 198);
 }
 
-.default.red{
-    background-color: brown;
+.default.red {
+  background-color: brown;
 }
 
 .disabled {
-    background-color: rgb(84, 117, 179);
-    color: rgb(208, 208, 208);
+  background-color: rgb(84, 117, 179);
+  color: rgb(208, 208, 208);
 }
 
 .default.disabled:hover,
@@ -32,34 +32,34 @@
 }
 
 .nav {
-    font-size: 20px;
-    font-weight: 300;
-    color: white;
-    padding: 10px 15px;
-    padding-bottom: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .nav.small {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .current {
-    border-bottom: 3px solid rgb(29, 92, 209);
-    color: rgb(29, 92, 209);
-    padding-bottom: 20px;
+  border-bottom: 3px solid rgb(29, 92, 209);
+  color: rgb(29, 92, 209);
+  padding-bottom: 20px;
 }
 
 .current.small {
-    border-bottom: 2px solid rgb(29, 92, 209);
+  border-bottom: 2px solid rgb(29, 92, 209);
 }
 
 .favoriteBtn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    border-radius: 12px;
-    padding: 5px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-radius: 12px;
+  padding: 5px;
 }

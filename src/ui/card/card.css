@@ -1,19 +1,19 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    max-width: 300px;
-    gap: 16px;
-    border-radius: 24px;
-    background-color: rgb(34, 34, 34);
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 300px;
+  gap: 16px;
+  border-radius: 24px;
+  background-color: rgb(34, 34, 34);
+  position: relative;
 }
 
 .card_img {
-    border-radius: 18px;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  border-radius: 18px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .icon {
@@ -26,20 +26,19 @@
   fill: white;
 }
 
-
 .card_title {
-    font-size: 20px;
-    font-weight: 300;
-    color: rgb(203, 203, 203);
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(203, 203, 203);
 }
 
 .card_description {
-    font-size: 16px;
-    color: rgb(203, 203, 203);
-    margin-bottom: auto;
+  font-size: 16px;
+  color: rgb(203, 203, 203);
+  margin-bottom: auto;
 }
 
 .card_price {
-    font-size: 24px;
-    font-weight: 300;
+  font-size: 24px;
+  font-weight: 300;
 }

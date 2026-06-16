@@ -1,7 +1,3 @@
-
 export const Orders = () => {
-  return (
-    <div>Orders</div>
-  )
+  return <div>Orders</div>
 }
-
