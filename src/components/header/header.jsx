@@ -15,8 +15,8 @@ const Header = () => {
 
   const pages = [
     { key: '/', label: 'Home' },
-    { key: '/basket', label: 'Basket' },
     { key: '/favorites', label: 'Favorites' },
+    { key: '/basket', label: 'Basket' },
     { key: '/orders', label: 'Orders' },
   ]
 

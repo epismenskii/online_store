@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import LoginForm from '../authForm/authForm'
 import RegisterForm from '../registerForm/registerForm'
 import Button from '../../ui/button/Button'
@@ -28,7 +27,9 @@ export const Modal = ({ onClose }) => {
         <div className="tabs">
           <Button
             className={signInModal ? 'nav small current' : 'nav small'}
-            onClick={() => setStep('signIn')}
+            onClick={() => {
+              setStep('signIn')
+            }}
           >
             SIGN IN
           </Button>
@@ -40,7 +41,11 @@ export const Modal = ({ onClose }) => {
           </Button>
         </div>
         <div className="formBlock">
-          {signInModal ? <LoginForm /> : <RegisterForm />}
+          {signInModal ? (
+            <LoginForm onClose={onClose} />
+          ) : (
+            <RegisterForm onClose={onClose} />
+          )}
         </div>
       </div>
     </div>

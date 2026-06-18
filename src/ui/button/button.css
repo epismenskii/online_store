@@ -57,6 +57,8 @@
 }
 
 .favoriteBtn {
+  height: 42px;
+  width: 42px;
   position: absolute;
   top: 30px;
   right: 30px;

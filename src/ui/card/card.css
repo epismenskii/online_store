@@ -26,6 +26,11 @@
   fill: white;
 }
 
+.icon.small {
+  width: 24px;
+  height: 24px;
+}
+
 .card_title {
   font-size: 20px;
   font-weight: 300;
@@ -41,4 +46,48 @@
 .card_price {
   font-size: 24px;
   font-weight: 300;
+}
+
+.changeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+  font-size: 20px;
+}
+
+.changeBtn button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  max-width: 100%;
+}
+
+.cartCard .card_img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.cartCard .card_title {
+  font-size: 18px;
+}
+
+.cartCard .changeBtn {
+  margin-left: auto;
 }

@@ -20,3 +20,13 @@ export const useFavoritesQuery = () => {
     },
   })
 }
+
+export const useBasketQuery = () => {
+  return useQuery({
+    queryKey: ['cart'],
+    queryFn: async () => {
+      const { data } = await $authApi.get('/cart')
+      return data
+    },
+  })
+}

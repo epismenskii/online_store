@@ -1,0 +1,37 @@
+.summary {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 24px;
+  padding: 30px;
+  position: sticky;
+  top: 20px;
+}
+
+.summaryTitle {
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 200;
+  color: rgb(203, 203, 203);
+}
+
+.summaryRow.total {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.summaryDivider {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}

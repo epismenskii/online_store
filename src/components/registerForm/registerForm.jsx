@@ -4,12 +4,12 @@ import Button from '../../ui/button/Button'
 import { Input } from '../../ui/input/Input'
 import './style.css'
 
-const RegisterForm = () => {
+const RegisterForm = ({ onClose }) => {
   const [login, setLogin] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const { mutate, isPending } = useRegisterMutation()
+  const { mutate, isPending } = useRegisterMutation(onClose)
 
   const register = (e) => {
     e.preventDefault()

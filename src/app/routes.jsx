@@ -6,6 +6,7 @@ import { Orders } from '../pages/orders/orders'
 import Layout from './Layout'
 import Providers from './providers'
 import Error404 from '../pages/error404/error404'
+import { ProtectedRoute } from './protectedRoute'
 
 const routes = createBrowserRouter([
   {
@@ -16,10 +17,15 @@ const routes = createBrowserRouter([
     ),
     children: [
       { path: '/', element: <Home /> },
-      { path: '/basket', element: <Basket /> },
-      { path: '/favorites', element: <Favorites /> },
-      { path: '/orders', element: <Orders /> },
       { path: '*', element: <Error404 /> },
+      {
+        element: <ProtectedRoute />,
+        children: [
+          { path: '/favorites', element: <Favorites /> },
+          { path: '/basket', element: <Basket /> },
+          { path: '/orders', element: <Orders /> },
+        ],
+      },
     ],
   },
 ])

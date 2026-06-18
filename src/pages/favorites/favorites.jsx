@@ -1,44 +1,24 @@
-import { useNavigate } from 'react-router-dom'
+import { EmptyPageComponent } from '../../components/emptyPageComponent/emptyPageComponent'
+import {
+  useCartButtonMutation,
+  useQuantityMutation,
+} from '../../store/cart-store'
 import { useFavoriteToggleMutation } from '../../store/favorite-store'
 import { useFavoritesQuery } from '../../store/products-store'
-import Button from '../../ui/button/Button'
 import Card from '../../ui/card/Card'
 import './favorites.css'
-import { useState } from 'react'
-import { Modal } from '../../components/modalWindow/modalWindow'
 
 export const Favorites = () => {
   const { data, isLoading, isError, error } = useFavoritesQuery()
   const favoriteMutation = useFavoriteToggleMutation()
-  const navigate = useNavigate()
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const cartMutation = useCartButtonMutation()
+  const quantityMutation = useQuantityMutation()
 
   if (isLoading) return <div>LOADING...</div>
-
-  if (isError && error?.response?.status === 401)
-    return (
-      <div className="signInNotification">
-        <p>Sign in to add products to favorites</p>
-        <div className="signInBtn">
-          <Button className={'default'} onClick={() => setIsModalOpen(true)}>
-            Sign in
-          </Button>
-        </div>
-        {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
-      </div>
-    )
-
   if (isError) return <div>ERROR :(</div>
 
   if (!data?.data?.products?.length)
-    return (
-      <div className="addToFavoriteNotification">
-        <p>You don't have any products in your favorites yet</p>
-        <Button className={'default'} onClick={() => navigate('/')}>
-          Go to catalog
-        </Button>
-      </div>
-    )
+    return <EmptyPageComponent text={'favorites'} />
 
   return (
     <div className="favoritesContainer">
@@ -53,6 +33,14 @@ export const Favorites = () => {
                 isFavorite: item.isFavorite ?? true,
               })
             }
+            onCartClick={() =>
+              cartMutation.mutate({ productId: item._id, isInCart: false })
+            }
+            quantity={item.quantity}
+            onQuantityChange={(newQty) => {
+              if (newQty < 1) return
+              quantityMutation.mutate({ productId: item._id, quantity: newQty })
+            }}
             className={'card'}
             image={item.image}
             title={item.name}

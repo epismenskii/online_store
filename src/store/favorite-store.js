@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { $authApi } from '../api/axios'
+import toast from 'react-hot-toast'
 
 export const useFavoriteToggleMutation = () => {
   const queryClient = useQueryClient()
@@ -20,7 +21,7 @@ export const useFavoriteToggleMutation = () => {
 
     onError: (error) => {
       if (error.response?.status === 401) {
-        alert('Пожалуйста, войдите в систему или зарегистрируйтесь')
+        toast('Please sign in or register')
       }
     },
   })

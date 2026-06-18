@@ -8,7 +8,6 @@ import './style.css'
 const LoginForm = ({ onClose }) => {
   const [loginOrEmail, setLoginOrEmail] = useState('')
   const [password, setPassword] = useState('')
-  const navigate = useNavigate('')
 
   const { mutate, isPending } = useLoginMutation(onClose)
 
@@ -33,11 +32,7 @@ const LoginForm = ({ onClose }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button
-          className={'default'}
-          disabled={isPending}
-          onClick={() => navigate('/')}
-        >
+        <Button className={'default'} disabled={isPending}>
           Sign In
         </Button>
       </form>
