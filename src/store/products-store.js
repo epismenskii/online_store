@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
 import { $mainApi, $authApi } from '../api/axios'
 
-export const useProductsQuery = () => {
+export const useProductsQuery = ( params = {} ) => {
   return useQuery({
-    queryKey: ['products'],
+    queryKey: ['products', params],
     queryFn: async () => {
-      const { data } = await $authApi.get('/products')
+      const { data } = await $authApi.get('/products', { params })
       return data
     },
   })
@@ -26,6 +26,16 @@ export const useBasketQuery = () => {
     queryKey: ['cart'],
     queryFn: async () => {
       const { data } = await $authApi.get('/cart')
+      return data
+    },
+  })
+}
+
+export const useCategoriesQuery = () => {
+  return useQuery({
+    queryKey: ['categories'],
+    queryFn: async () => {
+      const { data } = await $authApi.get('/categories')
       return data
     },
   })

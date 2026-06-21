@@ -3,6 +3,12 @@
   margin: 20px auto;
 }
 
+.inputBlock {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -10,8 +16,20 @@
   margin: 20px;
 }
 
-.inputBlock {
-  margin: 40px auto;
+
+.filterBlock {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 20px 0;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+}
+
+.priceFilter {
+  display: flex;
+  gap: 20px;
 }

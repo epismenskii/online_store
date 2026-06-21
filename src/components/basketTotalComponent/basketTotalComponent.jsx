@@ -24,3 +24,4 @@ export const BasketTotalComponent = ({ total }) => {
     </div>
   )
 }
+// поправить цену (Убрать вниз под название товара или в бок)

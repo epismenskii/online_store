@@ -19,3 +19,17 @@
   width: 300px;
   outline: none;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.price {
+  width: 100px;
+  
+}
+.price:focus {
+  width: 120px;
+  outline: none;
+}
