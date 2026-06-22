@@ -17,7 +17,6 @@ const Card = ({
   onCartClick,
   quantity,
   onQuantityChange,
-  onRemoveClick,
   showFavorite = true,
 }) => {
   return (

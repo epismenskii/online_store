@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import Button from '../../ui/button/Button'
+import { OrderModal } from '../orderModal/orderModal'
 import './style.css'
 
-export const BasketTotalComponent = ({ total }) => {
+export const BasketTotalComponent = ({ total, cartItems, onOrderSuccess }) => {
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false)
   const delivery = 500
 
   return (
@@ -20,8 +23,17 @@ export const BasketTotalComponent = ({ total }) => {
         <b>Total</b>
         <b>{total + delivery} Som</b>
       </div>
-      <Button className={'default'}>Place Order</Button>
+      <Button className={'default'} onClick={() => setIsOrderModalOpen(true)}>
+        Place Order
+      </Button>
+
+      <OrderModal
+        isOpen={isOrderModalOpen}
+        onClose={() => setIsOrderModalOpen(false)}
+        cartItems={cartItems}
+        total={total + delivery}
+        onOrderSuccess={onOrderSuccess}
+      />
     </div>
   )
 }
-// поправить цену (Убрать вниз под название товара или в бок)

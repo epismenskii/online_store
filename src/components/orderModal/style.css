@@ -1,0 +1,36 @@
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.orderModalHeader h1 {
+  font-weight: 100;
+  font-size: 36px;
+}
+
+.orderFormField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.orderFormError {
+  color: #ff4d4f;
+  font-size: 14px;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  font-size: 18px;
+}

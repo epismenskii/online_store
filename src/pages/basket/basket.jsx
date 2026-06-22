@@ -13,7 +13,7 @@ export const Basket = () => {
   const cartButtonMutation = useCartButtonMutation()
   const quantityMutation = useQuantityMutation()
   const total = data?.data?.items?.reduce((sum, item) => {
-    return sum + item.product.price * item.quantity
+    return sum + item?.product?.price * item?.quantity
   }, 0)
 
   if (isLoading) return <div>LOADING...</div>
@@ -31,12 +31,6 @@ export const Basket = () => {
               isInCart={true}
               showFavorite={false}
               onCartClick={() =>
-                cartButtonMutation.mutate({
-                  productId: item.product._id,
-                  isInCart: true,
-                })
-              }
-              onRemoveClick={() =>
                 cartButtonMutation.mutate({
                   productId: item.product._id,
                   isInCart: true,
@@ -61,7 +55,7 @@ export const Basket = () => {
           ))}
         </div>
       </div>
-      <BasketTotalComponent total={total} />
+      <BasketTotalComponent total={total} cartItems={data?.data?.items} />
     </div>
   )
 }

@@ -27,7 +27,6 @@ input::-webkit-inner-spin-button {
 
 .price {
   width: 100px;
-  
 }
 .price:focus {
   width: 120px;

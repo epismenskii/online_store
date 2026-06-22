@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { $authApi } from '../api/axios'
+import toast from 'react-hot-toast'
 
 export const useCartButtonMutation = () => {
   const queryClient = useQueryClient()

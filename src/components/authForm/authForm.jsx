@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Input } from '../../ui/input/Input'
 import Button from '../../ui/button/Button'
 import { useLoginMutation } from '../../store/auth-store'
-import { useNavigate } from 'react-router'
 import './style.css'
 
 const LoginForm = ({ onClose }) => {

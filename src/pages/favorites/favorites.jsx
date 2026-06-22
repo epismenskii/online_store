@@ -9,7 +9,7 @@ import Card from '../../ui/card/Card'
 import './favorites.css'
 
 export const Favorites = () => {
-  const { data, isLoading, isError, error } = useFavoritesQuery()
+  const { data, isLoading, isError } = useFavoritesQuery()
   const favoriteMutation = useFavoriteToggleMutation()
   const cartMutation = useCartButtonMutation()
   const quantityMutation = useQuantityMutation()

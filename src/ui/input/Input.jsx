@@ -1,7 +1,13 @@
 import './input.css'
 import Button from '../button/Button'
 
-export const InputSearch = ({ value, onChange, className, onSearch, ...props }) => {
+export const InputSearch = ({
+  value,
+  onChange,
+  className,
+  onSearch,
+  ...props
+}) => {
   return (
     <div className="inputContainer">
       <input
@@ -10,12 +16,21 @@ export const InputSearch = ({ value, onChange, className, onSearch, ...props }) 
         onChange={onChange}
         {...props}
       />
-      <Button className={'default'} onClick={onSearch}>Search</Button>
+      <Button className={'default'} onClick={onSearch}>
+        Search
+      </Button>
     </div>
   )
 }
 
-export const Input = ({ type, placeholder, className, value, onChange, ...props }) => {
+export const Input = ({
+  type,
+  placeholder,
+  className,
+  value,
+  onChange,
+  ...props
+}) => {
   return (
     <div className="inputContainer">
       <input

@@ -23,20 +23,19 @@ $authApi.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config
 
-    if(error.response.status === 401) {
+    if (error.response.status === 401) {
       try {
-          const { data } = await $mainApi.post('/auth/refresh')
-          if (data.accessToken) {
-            localStorage.setItem('accessToken', data.accessToken)
-          }
-          return $authApi.request(originalRequest)
+        const { data } = await $mainApi.post('/auth/refresh')
+        if (data.accessToken) {
+          localStorage.setItem('accessToken', data.accessToken)
+        }
+        return $authApi.request(originalRequest)
       } catch (e) {
-        return Promise.reject(e) 
+        return Promise.reject(e)
       }
-      
     }
     return Promise.reject(error)
-  }
+  },
 )
 
 export { $mainApi, $authApi }

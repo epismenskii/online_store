@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useRegisterMutation } from '../../store/auth-store'
 import Button from '../../ui/button/Button'
 import { Input } from '../../ui/input/Input'

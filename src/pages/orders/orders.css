@@ -1,0 +1,85 @@
+.ordersContainer {
+  max-width: 1240px;
+  margin: 40px auto;
+  padding: 0 20px 80px;
+}
+
+.ordersContainer h1 {
+  font-size: 36px;
+  font-weight: 200;
+  margin-bottom: 24px;
+}
+
+.orderCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.orderHeader h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(203, 203, 203);
+}
+
+.orderHeader span {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.orderCard p {
+  color: rgb(203, 203, 203);
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.orderProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+.orderProduct {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.orderProduct img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.orderProduct h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(203, 203, 203);
+}
+
+.orderProduct p {
+  margin-top: 4px;
+}
+
+.orderCard b {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  font-weight: 300;
+}

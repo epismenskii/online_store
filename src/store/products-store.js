@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
-import { $mainApi, $authApi } from '../api/axios'
+import { $authApi } from '../api/axios'
 
-export const useProductsQuery = ( params = {} ) => {
+export const useProductsQuery = (params = {}) => {
   return useQuery({
     queryKey: ['products', params],
     queryFn: async () => {

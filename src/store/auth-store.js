@@ -2,7 +2,7 @@ import { useMutation } from '@tanstack/react-query'
 import { $mainApi } from '../api/axios'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/use-auth'
-import toast, { Toaster } from 'react-hot-toast'
+import toast from 'react-hot-toast'
 
 export const useLoginMutation = (onClose) => {
   const navigate = useNavigate()

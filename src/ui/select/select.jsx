@@ -9,20 +9,16 @@ export const Select = ({ className, value, onChange, children, ...props }) => {
         onChange={onChange}
         {...props}
       >
-      {children}
-     </select>
+        {children}
+      </select>
     </div>
   )
 }
 
 export const Option = ({ value, className, children }) => {
-    return(
-        <option
-          className={className}
-          value={value}
-        >
-            {children}
-        </option>
-    )
-    
+  return (
+    <option className={className} value={value}>
+      {children}
+    </option>
+  )
 }

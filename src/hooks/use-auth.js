@@ -41,6 +41,6 @@ export const useCheckAuth = () => {
     }
 
     checkAuth()
-  }, [])
+  }, [clear, setAuth, setUser])
   return { loading }
 }

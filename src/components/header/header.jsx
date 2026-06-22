@@ -46,6 +46,7 @@ const Header = () => {
           <div className="signInBtn">
             <Button
               className={'default'}
+              disabled={isPending}
               onClick={() => {
                 mutate()
                 setIsModalOpen(false)
